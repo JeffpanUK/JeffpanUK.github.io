@@ -181,6 +181,14 @@ body, html {
 	background-size: 22px;
 }
 
+.i-nuance:before {
+	content: "";
+	display: block;
+	width: 40px;
+	height: 40px;
+	background: url("../images/logo-nuance.png") 50% 50% no-repeat;
+	background-size: 22px;
+}
 /******* Hux Branch *****/
 
 /* navbar - dark mode */
