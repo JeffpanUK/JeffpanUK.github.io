@@ -90,13 +90,13 @@ $$TEXT \rightarrow Model_{end-to-end} \rightarrow Acoustic Feature \rightarrow V
 
 在产品化中，end-to-end面临着一些特有的问题：
 
-- 如何在不重新训练模型的情况下进行tuning？
+#### 3.2  如何在不重新训练模型的情况下进行tuning？
 
   因为神经网络的问题在于结果不可控，因此难免出现一些预测错误。放在从前，这些错误可以通过调整特定的模块进行处理，但是在end-to-end的架构下，这种调优变得impractical。 设计一个优雅的调优策略是亟待解决的问题。 
 
   在百度的deep voice v3中，采用的对读音tuning的办法是在训练时同时加入phoneme embedding的输入。这样可以在调整读音时，强行输入需要的读音的embedding即可。
 
-- 如何解决错误累积的问题？
+#### 3.1 如何解决错误累积的问题？
 
   由于上述的end-to-end结构都是类似于将多任务bundle在一起，这样会导致前序的错误累积到后续的层级。这会造成一些不可预知的错误，并且难以追溯到错误的引发点。
 
