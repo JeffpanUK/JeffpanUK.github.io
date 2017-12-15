@@ -1,6 +1,4 @@
-
-
-> I DON'T PROMISE ANYTHING TO ANYONE WITHOUT 100% CONFIDENCE:)
+> Nothing Impossible:)
 
 
 Hi, I am *@jeffpanuk* (Pan, Jeff), a TTS research engineer. 

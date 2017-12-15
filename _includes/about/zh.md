@@ -1,5 +1,4 @@
 > 未来那么远，过得开心就好。  
-> I DON'T PROMISE ANYTHING TO ANYONE WITHOUT 100% CONFIDENCE:)
 
 Hello, 我是Jeff, 毕业于University of Cambridge。
 

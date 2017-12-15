@@ -7,7 +7,8 @@ author:     "Jeff"
 header-img: "img/in-post/post-tts.jpg"
 catalog: true
 tags:
-    - TTS|end-to-end
+    - TTS
+    - end-to-end
 ---
 
 **作者：Jeff Pan**

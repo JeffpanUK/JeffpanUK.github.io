@@ -11,8 +11,8 @@ tags:
 ---
 ### 使用多进程可以采用的两种方式
 
-#### Queue
-#### Pool
+- Queue
+- Pool
 
 ### Queue 队列,先进先出
 
