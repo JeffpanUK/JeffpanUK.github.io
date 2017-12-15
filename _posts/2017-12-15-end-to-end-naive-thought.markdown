@@ -18,7 +18,7 @@ tags:
 
 当前成熟的语音合成前段框架大体采用的是模块化的前端，按照固定的pipeline逐一得出相应模块的结果，加入到最终的语言学特征中， 如下:
 
-$|TN| \rightarrow |Word Parser| \rightarrow |POS| \rightarrow |G2P| \rightarrow |Prosody| \rightarrow |PostFixing|$
+$$|TN| \rightarrow |Word Parser| \rightarrow |POS| \rightarrow |G2P| \rightarrow |Prosody| \rightarrow |PostFixing|$$
 
 *POS: part-of-speech 词性*
 
@@ -50,7 +50,7 @@ $|TN| \rightarrow |Word Parser| \rightarrow |POS| \rightarrow |G2P| \rightarrow 
 
 具体实现是：
 
-$TEXT \rightarrow Model_{end-to-end} \rightarrow Acoustic Feature \rightarrow Vocoder \rightarrow WAV$
+$$TEXT \rightarrow Model_{end-to-end} \rightarrow Acoustic Feature \rightarrow Vocoder \rightarrow WAV$$
 
 这样的构想看起来很美好，非常的简洁。但是实际实现起来难度很大， 主要是由于文本层面的特征信息过少，直接映射成声学特征可能需要极为复杂的网络结构，难以调参和训练。
 
