@@ -74,7 +74,7 @@ $$TEXT \rightarrow Model_{end-to-end} \rightarrow Acoustic Feature \rightarrow V
 
   http://www.isca-speech.org/archive/Interspeech_2017/pdfs/0949.PDF
 
-  ![BLSTM-sol-e](img/in-post/post-end-to-end-tts/BLSTM-sol-e.png)
+  ![BLSTM-sol-e](/img/in-post/post-end-to-end-tts/BLSTM-sol-e.png)
 
 输出层采用了主任务+辅任务的形式，辅任务的输出通过一个非线性变化加入到主任务的中间层输入中。多任务共享前几层的网络权值。
 
@@ -82,7 +82,7 @@ $$TEXT \rightarrow Model_{end-to-end} \rightarrow Acoustic Feature \rightarrow V
 
   https://arxiv.org/pdf/1611.01587.pdf
 
-![joint-nn](img/in-post/post-end-to-end-tts/joint-nn.png)
+![joint-nn](/img/in-post/post-end-to-end-tts/joint-nn.png)
 
 该结构的假设是各个NLP任务之间存在着必然的层级关系(类似于前文所述的pipeline结构)，因此可以将多个网络串联成一个大的网络，其中的隐层输出可以理解为各个NLP任务的结果。 整个网络在训练时，是逐一训练而不是联合训练的，但是在解码(decode)时是一次性解码的。
 
