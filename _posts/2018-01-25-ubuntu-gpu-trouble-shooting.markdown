@@ -4,7 +4,7 @@ title:      "Ubuntu中使用gpu遇到的问题"
 subtitle:   "GPU makes life easier, while Unix does not."
 date:       2017-12-15 16:49:36
 author:     "Jeff"
-header-img: "img/in-post/post-gpu-linux.jpg"
+header-img: "img/in-post/post-gpu-linux.png"
 catalog: true
 tags:
     - LINUX
