@@ -32,7 +32,7 @@ tags:
 
 ##### Q2: CUDA开启或者关闭error correcting code (ECC)
 
-#####A2:
+##### A2:
 
 ECC(error correcting code,  错误检查和纠正)能够提高数据的正确性，随之而来的是可用内存的减少和性能上的损失。对于Tesla系列伺服器该功能默认开启。
 
