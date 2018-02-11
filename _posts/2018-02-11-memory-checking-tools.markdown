@@ -50,7 +50,7 @@ tags:
 
 - **缺点**： 需要重新编译可执行文件
 
-#### 3. **DocMemory** 		推荐指数： ★★★☆☆ 
+  #### 3. **DocMemory** 	推荐指数： ★★★☆☆ 
 
 - windows平台下的内存检测工具
 - ``Usage: docMemory.exe program.exe args``
@@ -73,7 +73,14 @@ tags:
     - Note：*still reacheable*部分可以忽略。
     - 常见问题：
       - malloc, calloc 与free不配对提前return或者goto使用时，造成possible leak
+
       - free 多次同一内存free未初始化的内存
+
+      - 如果使用了
+
+        [^tcmalloc]: tcmalloc相比于glibc的内存分配管理机制，效率更高，碎片更少，并且自带内存检测。 使用只需要在编译时向makefile中加入-ltcmalloc即可。 如果是cmake， 则直接链接tcmalloc.so动态库即可。但是tcmalloc自带的内存检测功能十分有限，并且无法检测内存越界。
+
+        代替原始的malloc, 会使得valgrind失效
 - **优点**： 可以对任何可执行文件使用， 可视化图像显示内存使用
 - **缺点**： 常常会有误报， 受编译环境影响较大
 
