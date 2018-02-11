@@ -1,10 +1,10 @@
 ---
 layout:     post
-title:      "对程序内存问题的检测方法"
+title:      "内存问题检测的四种写法"
 subtitle:   "Fight against memory error."
 date:       2018-02-11 14:07:00
 author:     "Jeff"
-header-img: "img/in-post/post-memory-leak.png"
+header-img: "img/in-post/post-memory-leak.jpg"
 catalog: true
 tags:
     - Memory
@@ -16,19 +16,19 @@ tags:
 
 **转载请联系作者(kevinjjp@gmail.com)或在下方留言，侵权必究。**
 
-=======================================================================================
+
 
 #四种内存检测方法
 
-#### 1. 微软大法：VS2017
+#### 1. 微软大法：VS2017			推荐指数：未知
 
 (未使用过)
 
-#### 2. 编译时：sanitizer 		推荐指数： ★★★★★
+#### 2. sanitizer 		推荐指数： ★★★★★
 
 - 包括*address, memory, leak*等多种sanitizer检测工具
 
-- 在使用*gcc*或者*clang*中加入选项即可 ``"-fsanitize=leak"``
+- 在使用*gcc*或者*clang*编译时，加入额外编译选项``"-fsanitize=leak"``
 
 - *memsanitizer*和*leaksanitizer*只能够在*clang*中使用
 
@@ -42,34 +42,42 @@ tags:
 
   ``export MSAN_OPTIONS=symbolize=1``
 
-   ``export MSAN_SYMBOLIZER_PATH=$(which llvm-symbolizer)``
+  ``export MSAN_SYMBOLIZER_PATH=$(which llvm-symbolizer)``
 
   ``export LSAN_OPTIONS=symbolize=1``
 
   ``export LSAN_SYMBOLIZER_PATH=$(which llvm-symbolizer)``
 
-#### 3. 编译后：DocMemory & valgrindD 
+- **优点**： 定位准确， 检查全面
 
-- **DocMemory** 		推荐指数： ★★★☆☆
-  - windows平台下的内存检测工具
-  - Usage: docMemory.exe program.exe args
-  - 定位不一定准确
-- **valgrind**  		        推荐指数： ★★★★☆
-  - linux平台下的内存检测工具包含多种tool包
-    - massif
-      - Usage: valgrind --tool=massif ./target args
-      - 输出: massif.id.out文件, 使用ms_print massif.id.out 即可打印出结果
-      - 作用： 检测runtime时的内存消耗。 
-      - 如果是debug版本的程序，可以直接定位到行。
-    - memcheck
-      - Usage: valgrind --tool=memcheck --leak-check=full ./target args
-      - 输出：内存泄漏、越界的代码位置
-      - 作用：检测内存泄漏或者内存越界。
-      - 如果是debug版本的程序，可以直接定位到行。
-      - Note：still reacheable可以忽略。
-      - 常见问题：
-        - malloc, calloc 与free不配对提前return或者goto使用时，造成possible leak
-        - free 多次同一内存free未初始化的内存
+- **缺点**： 需要重新编译可执行文件
+
+#### 3. **DocMemory** 		推荐指数： ★★★☆☆ 
+
+- windows平台下的内存检测工具
+- ``Usage: docMemory.exe program.exe args``
+- **优点**： 可以对任何可执行文件使用
+- **缺点**： 定位不一定准确
+
+####4. valgrind         推荐指数： ★★★★☆
+
+- linux平台下的内存检测工具包含多种tool包
+  - massif
+    - ``Usage: valgrind --tool=massif ./target args``
+    - 输出: *massif.id.out*文件, 使用``ms_print massif.id.out`` 即可打印出结果
+    - 作用： 检测runtime时的内存消耗。 
+    - 如果是debug版本的程序，可以直接定位到行。
+  - memcheck
+    - ``Usage: valgrind --tool=memcheck --leak-check=full ./target args``
+    - 输出：内存泄漏、越界的代码位置
+    - 作用：检测内存泄漏或者内存越界。
+    - 如果是debug版本的程序，可以直接定位到行。
+    - Note：*still reacheable*部分可以忽略。
+    - 常见问题：
+      - malloc, calloc 与free不配对提前return或者goto使用时，造成possible leak
+      - free 多次同一内存free未初始化的内存
+- **优点**： 可以对任何可执行文件使用， 可视化图像显示内存使用
+- **缺点**： 常常会有误报， 受编译环境影响较大
 
 # 总结
 
