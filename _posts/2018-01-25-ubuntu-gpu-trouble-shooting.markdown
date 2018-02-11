@@ -2,7 +2,7 @@
 layout:     post
 title:      "Ubuntu中使用gpu遇到的问题"
 subtitle:   "GPU makes life easier, while Unix does not."
-date:       2017-12-15 16:49:36
+date:       2018-01-25 16:00:00
 author:     "Jeff"
 header-img: "img/in-post/post-gpu-linux.png"
 catalog: true
