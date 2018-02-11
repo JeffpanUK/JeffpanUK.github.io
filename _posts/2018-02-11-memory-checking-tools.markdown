@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "内存问题检测的四种写法"
-subtitle:   "Fight against memory error."
+subtitle:   "我不是孔乙己"
 date:       2018-02-11 14:07:00
 author:     "Jeff"
 header-img: "img/in-post/post-memory-leak.jpg"
@@ -59,7 +59,7 @@ tags:
 - **优点**： 可以对任何可执行文件使用
 - **缺点**： 定位不一定准确
 
-####4. valgrind         推荐指数： ★★★★☆
+#### 4. valgrind         推荐指数： ★★★★☆
 
 - linux平台下的内存检测工具包含多种tool包
   - massif
