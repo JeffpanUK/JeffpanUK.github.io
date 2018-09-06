@@ -27,7 +27,6 @@ description: "未来那么远，开心就好"
 <!-- Pager -->
 {% if paginator.total_pages > 1 %}
 <ul class="pager">
-    <a href="http://www.visitormap.org/" target="_top"><img src="http://www.visitormap.org/map/m:vckhkohxurkzweib/s:1/c:00ff00/p:cross/y:0.png" alt="Free Visitor Maps at VisitorMap.org" border="0"></a><br><a href="http://www.visitormap.org/">Get a FREE visitor map for your site!</a>
     {% if paginator.previous_page %}
     <li class="previous">
         <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Posts</a>
