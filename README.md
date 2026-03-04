@@ -83,7 +83,7 @@ jeffpan.net/
 - 论文链接和代码
 
 ### 6. 联系我
-- 联系表单
+- 联系表单，使用 Formspree 服务发送到指定邮箱
 - 邮箱、电话、社交媒体
 - 地理位置
 
@@ -95,6 +95,7 @@ jeffpan.net/
 - **JavaScript ES6+**: 交互逻辑和数据处理
 - **Flexbox/Grid**: 布局系统
 - **CSS Variables**: 主题切换和样式管理
+- **Formspree**: 表单提交服务
 
 ### 工具和框架
 - **Node.js**: 开发和构建工具
