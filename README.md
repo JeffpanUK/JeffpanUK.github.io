@@ -11,6 +11,52 @@
 - 📄 **内容管理**: 易于维护和扩展的内容结构
 - 🔧 **技术先进**: 使用最新的前端技术和设计原则
 
+## 📧 联系表单功能
+
+### EmailJS 配置步骤
+
+1. **注册 EmailJS 账号**：访问 https://www.emailjs.com/ 注册免费账号
+2. **添加 EmailJS 脚本**：在网站的 `<head>` 标签中添加 EmailJS 脚本：
+   ```html
+   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+   ```
+3. **配置 EmailJS**：
+   ```javascript
+   emailjs.init("YOUR_USER_ID"); // 您的 EmailJS 公钥
+   ```
+4. **更新表单提交代码**：
+   ```javascript
+   // 使用 EmailJS 发送邮件
+   emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
+     .then(function(response) {
+       console.log('SUCCESS!', response.status, response.text);
+       alert('消息发送成功！');
+       this.reset();
+       window.location.href = 'https://jeffpan.net/thank-you.html';
+     }, function(error) {
+       console.log('FAILED...', error);
+       alert('发送失败，请稍后重试');
+     })
+     .finally(function() {
+       button.textContent = originalText;
+       button.disabled = false;
+     });
+   ```
+
+### 配置参数说明
+
+- **YOUR_USER_ID**：在 EmailJS 控制台获取的公钥
+- **YOUR_SERVICE_ID**：配置的邮件服务 ID（如 Gmail、Outlook 或 QQ 邮箱）
+- **YOUR_TEMPLATE_ID**：创建的邮件模板 ID
+
+### 创建邮件模板
+
+在 EmailJS 控制台中创建一个邮件模板，包含以下字段：
+- `{{name}}`：姓名
+- `{{email}}`：邮箱
+- `{{subject}}`：主题
+- `{{message}}`：消息内容
+
 ## 📧 邮件通知配置
 
 ### 1. 设置 QQ 邮箱授权码
