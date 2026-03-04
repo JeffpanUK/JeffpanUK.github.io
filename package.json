@@ -1,0 +1,32 @@
+{
+  "name": "jeffpan-personal-website",
+  "version": "1.0.0",
+  "description": "现代化、专业的个人网站，用于展示大模型算法方向的履历、技能、项目、学术成果",
+  "main": "index.html",
+  "scripts": {
+    "build": "npm run clean && npm run copy-files",
+    "clean": "rm -rf dist && mkdir -p dist",
+    "copy-files": "cp -r *.html *.css *.js assets dist/ 2>/dev/null || true && cp index.html dist/",
+    "serve": "python3 -m http.server 8000",
+    "deploy": "npm run build && gh-pages -d dist"
+  },
+  "keywords": [
+    "personal-website",
+    "portfolio",
+    "resume",
+    "github-pages",
+    "ai",
+    "machine-learning",
+    "nlp"
+  ],
+  "author": "Jeff Pan",
+  "license": "MIT",
+  "devDependencies": {
+    "gh-pages": "^6.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/2359501/jeffpan.net.git"
+  },
+  "homepage": "https://jeffpan.net"
+}

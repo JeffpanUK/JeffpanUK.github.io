@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>测试页面</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 50px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .success {
+            color: #28a745;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .error {
+            color: #dc3545;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>网站测试页面</h1>
+        
+        <div id="testResults">
+            <p>点击下方按钮测试网站功能</p>
+        </div>
+        
+        <button id="runTests">运行测试</button>
+    </div>
+
+    <script>
+        document.getElementById('runTests').addEventListener('click', function() {
+            const resultsDiv = document.getElementById('testResults');
+            resultsDiv.innerHTML = '<p>正在测试...</p>';
+            
+            // 测试 1: 检查页面结构
+            const test1 = document.querySelector('.hero-content');
+            const test2 = document.querySelector('.about-grid');
+            const test3 = document.querySelector('.skills-container');
+            const test4 = document.querySelector('.timeline');
+            const test5 = document.querySelector('.projects-grid');
+            const test6 = document.querySelector('.publication-card');
+            const test7 = document.getElementById('contactForm');
+            
+            const tests = [
+                { name: '首页英雄区域', passed: !!test1 },
+                { name: '关于我区域', passed: !!test2 },
+                { name: '技能区域', passed: !!test3 },
+                { name: '工作经验区域', passed: !!test4 },
+                { name: '项目展示区域', passed: !!test5 },
+                { name: '学术成果区域', passed: !!test6 },
+                { name: '联系表单', passed: !!test7 }
+            ];
+            
+            let html = '';
+            let allPassed = true;
+            
+            tests.forEach(test => {
+                const result = test.passed ? '✅' : '❌';
+                const className = test.passed ? 'success' : 'error';
+                html += `<p class="${className}">${result} ${test.name} ${test.passed ? '通过' : '失败'}</p>`;
+                if (!test.passed) allPassed = false;
+            });
+            
+            html += `<p style="margin-top: 20px; font-weight: bold;">`;
+            if (allPassed) {
+                html += `✅ 所有测试通过！网站功能正常。`;
+            } else {
+                html += `❌ 部分测试失败，请检查相关功能。`;
+            }
+            html += `</p>`;
+            
+            resultsDiv.innerHTML = html;
+        });
+    </script>
+</body>
+</html>
