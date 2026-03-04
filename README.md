@@ -11,9 +11,56 @@
 - 📄 **内容管理**: 易于维护和扩展的内容结构
 - 🔧 **技术先进**: 使用最新的前端技术和设计原则
 
-## 📧 联系表单功能
+## 📧 联系表单功能 (EmailJS)
 
-### GitHub Actions 配置方法
+### EmailJS 配置方法
+
+#### 为什么选择 EmailJS
+- 完全免费的个人计划（每月 200 封邮件）
+- 易于配置，无需任何后端代码
+- 提供高质量的邮件服务
+- 支持多种邮箱提供商
+- 安全可靠，符合现代安全标准
+
+#### 配置步骤
+
+1. **注册 EmailJS 账号**
+   - 访问：https://www.emailjs.com/
+   - 注册一个免费账号（支持 Google 或 GitHub 登录）
+
+2. **获取您的配置信息**
+   - 登录后点击 "Integration" 查看您的 User ID
+   - 点击 "Email Services" 添加您的邮箱服务
+   - 点击 "Email Templates" 创建邮件模板
+
+3. **配置 QQ 邮箱**
+   - 在 EmailJS 中选择 "Custom SMTP" 服务
+   - 填写以下信息：
+     ```
+     Service ID: service_qq_smtp
+     Host: smtp.qq.com
+     Port: 587
+     Username: 2359501@qq.com
+     Password: 您的 QQ 邮箱授权码
+     ```
+
+4. **创建邮件模板**
+   - 主题：`联系表单 - {{subject}}`
+   - 内容：
+     ```
+     姓名：{{name}}
+     邮箱：{{email}}
+     主题：{{subject}}
+     消息：{{message}}
+     ```
+
+5. **更新网站代码**
+   - 在 `index.html` 中更新 EmailJS 公钥和模板信息
+   - 构建并部署您的网站
+
+### 详细配置说明
+
+请查看 `emailjs-config.md` 文件获取完整的配置步骤和常见问题解答。# GitHub Actions 配置方法
 
 #### 1. 设置 GitHub Secrets
 
