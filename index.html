@@ -750,7 +750,18 @@
     <script type="text/javascript">
         emailjs.init("user_your_public_key"); // 替换为您的 EmailJS 公钥
     </script>
-</head>
+    <!-- 内容安全策略 -->
+    <meta http-equiv="Content-Security-Policy" content="
+        default-src 'self';
+        script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net;
+        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+        font-src 'self' https://fonts.gstatic.com;
+        img-src 'self' data:;
+        connect-src 'self' https://api.emailjs.com;
+    ">    <meta name="X-Content-Type-Options" content="nosniff">
+    <meta name="X-Frame-Options" content="DENY">
+    <meta name="X-XSS-Protection" content="1; mode=block">
+    <meta name="Referrer-Policy" content="strict-origin-when-cross-origin"></head>
 <body>
     <!-- 导航栏 -->
     <nav>
