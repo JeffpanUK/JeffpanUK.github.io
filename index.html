@@ -279,6 +279,26 @@
             font-size: 1.5rem;
         }
 
+        /* 两列布局 */
+        .two-column-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+        
+        .column h3 {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            color: var(--primary);
+        }
+        
+        @media (max-width: 768px) {
+            .two-column-layout {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }
         /* 教育背景 */
         .education-content {
             max-width: 800px;
@@ -892,8 +912,8 @@
             <ul class="nav-links">
                 <li><a href="#about">关于我</a></li>
                 <li><a href="#education">教育背景</a></li>
-                <li><a href="#skills">技能</a></li>
-                <li><a href="#experience">工作经验</a></li>
+
+                <li><a href="#experience-education">经历与教育</a></li>
                 <li><a href="#projects">项目</a></li>
                 <li><a href="#publications">学术成果</a></li>
                 <li><a href="mailto:kevinjjp@gmail.com" class="email-link">邮箱</a></li>
@@ -930,147 +950,92 @@
             <div class="about-grid">
                 <div class="about-text">
                     <h3>专注于大模型算法研究</h3>
-                    <p>我是一名专注于大模型算法方向的研究人员，拥有丰富的自然语言处理和机器学习经验。</p>
+                    <p>我是一名专注于大模型算法方向的研究人员，目前在字节跳动 Seed 担任语音生成应用 Leader。</p>
                     <p>我的研究方向包括：</p>
                     <ul class="skill-list">
-                        <li>大语言模型的预训练与微调</li>
-                        <li>自然语言理解与生成</li>
-                        <li>知识表示与知识图谱</li>
-                        <li>机器学习算法优化</li>
-                        <li>模型压缩与加速</li>
+                        <li>多模态生成式大模型</li>
+                        <li>语音对话大模型</li>
+                        <li>Audio Caption（音频描述生成）</li>
+                        <li>自动化小说演播系统</li>
                     </ul>
-                    <p>我致力于将先进的算法研究成果应用于实际场景，推动人工智能技术的发展。</p>
+                    <p>我拥有丰富的自然语言处理和机器学习经验，致力于将先进的算法研究成果应用于实际场景，推动人工智能技术的发展。</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 教育背景 -->
-    <section id="education">
+    <!-- 经历与教育 -->
+    <section id="experience-education">
         <div class="container">
             <div class="section-title">
-                <h2>教育背景</h2>
+                <h2>职业经历与教育背景</h2>
                 <div class="divider"></div>
             </div>
-            <div class="education-content">
-                <div class="education-item">
-                    <div class="education-degree">硕士</div>
-                    <div class="education-institution">英国剑桥大学</div>
-                    <div class="education-major">机器学习 (Machine Learning)</div>
-                    <div class="education-year">2015 - 2016</div>
-                </div>
-                <div class="education-item">
-                    <div class="education-degree">本科</div>
-                    <div class="education-institution">英国伯明翰大学</div>
-                    <div class="education-major">电子电气工程与计算机工程 (EECE)</div>
-                    <div class="education-year">2011 - 2015</div>
-                </div>
-                <div class="education-item">
-                    <div class="education-degree">本科</div>
-                    <div class="education-institution">华中科技大学</div>
-                    <div class="education-major">通信工程</div>
-                    <div class="education-year">2010 - 2011</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 技能 -->
-    <section id="skills">
-        <div class="container">
-            <div class="section-title">
-                <h2>技能特长</h2>
-                <div class="divider"></div>
-            </div>
-            <div class="skills-container">
-                <div class="skill-card">
-                    <h3>大模型技术</h3>
-                    <ul class="skill-list">
-                        <li>GPT、BERT、T5 等预训练模型</li>
-                        <li>LoRA、QLoRA 模型微调</li>
-                        <li>模型压缩与加速</li>
-                        <li>部署优化与推理加速</li>
-                        <li>大模型服务架构</li>
-                    </ul>
-                </div>
-                <div class="skill-card">
-                    <h3>深度学习框架</h3>
-                    <ul class="skill-list">
-                        <li>TensorFlow、PyTorch</li>
-                        <li>Hugging Face Transformers</li>
-                        <li>DeepSpeed、Megatron</li>
-                        <li>Ray、Dask 分布式计算</li>
-                        <li>ONNX、TensorRT 优化</li>
-                    </ul>
-                </div>
-                <div class="skill-card">
-                    <h3>自然语言处理</h3>
-                    <ul class="skill-list">
-                        <li>文本分类与情感分析</li>
-                        <li>命名实体识别</li>
-                        <li>语义相似度计算</li>
-                        <li>文本生成与摘要</li>
-                        <li>对话系统与问答</li>
-                    </ul>
-                </div>
-                <div class="skill-card">
-                    <h3>工具与开发</h3>
-                    <ul class="skill-list">
-                        <li>Python、C++、Java</li>
-                        <li>Git、Docker、Kubernetes</li>
-                        <li>Linux 系统管理</li>
-                        <li>大数据处理</li>
-                        <li>模型部署与监控</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 工作经验 -->
-    <section id="experience">
-        <div class="container">
-            <div class="section-title">
-                <h2>工作经验</h2>
-                <div class="divider"></div>
-            </div>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <div class="timeline-date">2023 - 至今</div>
-                        <div class="timeline-title">语音算法专家</div>
-                        <div class="timeline-company">字节跳动 - Seed</div>
-                        <div class="timeline-description">
-                            - 负责大模型在语音合成与处理领域的应用研究<br>
-                            - 开发高性能语音识别与合成系统<br>
-                            - 优化语音算法的实时性与准确率<br>
-                            - 领导团队攻克语音处理核心技术难题
+            <div class="two-column-layout">
+                <!-- 工作履历 -->
+                <div class="column">
+                    <h3>职业经历</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <div class="timeline-date">2023 - 至今</div>
+                                <div class="timeline-title">语音生成应用 Leader</div>
+                                <div class="timeline-company">字节跳动 - Seed</div>
+                                <div class="timeline-description">
+                                    - 豆包语音：负责豆包大模型的语音能力交付，包括语音朗读、实时通话、唱歌和方言支持<br>
+                                    - Audio Caption：开发基于多模态大模型的音频描述生成系统<br>
+                                    - 领导团队搭建语音生成技术平台，支持多种应用场景
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <div class="timeline-date">2018 - 2023</div>
+                                <div class="timeline-title">语音算法工程师</div>
+                                <div class="timeline-company">字节跳动 - AI Lab</div>
+                                <div class="timeline-description">
+                                    - 番茄小说有声书：从 0 到 1 搭建自动化单播、多播有声书方案<br>
+                                    - 剪映文本朗读：上线抖音小姐姐、东北老铁、陕西佟掌柜等热门音色<br>
+                                    - 优化语音合成模型，提升自然度和真实感
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <div class="timeline-date">2016 - 2018</div>
+                                <div class="timeline-title">语音算法工程师</div>
+                                <div class="timeline-company">Cerence (Nuance)</div>
+                                <div class="timeline-description">
+                                    - 方言 TTS 系统：开发支持多种中国方言的语音合成系统<br>
+                                    - TTS 前端：优化文本分析和韵律建模技术<br>
+                                    - 参与车载语音助手的研发，提升在复杂环境下的识别率
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <div class="timeline-date">2018 - 2023</div>
-                        <div class="timeline-title">语音算法工程师</div>
-                        <div class="timeline-company">字节跳动 - AI Lab</div>
-                        <div class="timeline-description">
-                            - 研发端到端语音识别系统<br>
-                            - 开发自然语言处理与语音合成结合的创新应用<br>
-                            - 优化深度学习模型在移动设备上的部署<br>
-                            - 参与大规模语音数据集的构建与处理
+                
+                <!-- 教育背景 -->
+                <div class="column">
+                    <h3>教育背景</h3>
+                    <div class="education-content">
+                        <div class="education-item">
+                            <div class="education-degree">硕士</div>
+                            <div class="education-institution">英国剑桥大学</div>
+                            <div class="education-major">机器学习 (Machine Learning)</div>
+                            <div class="education-year">2015 - 2016</div>
                         </div>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <div class="timeline-date">2016 - 2018</div>
-                        <div class="timeline-title">语音算法工程师</div>
-                        <div class="timeline-company">Cerence (Nuance)</div>
-                        <div class="timeline-description">
-                            - 开发智能语音交互系统<br>
-                            - 优化语音识别算法的噪声鲁棒性<br>
-                            - 参与车载语音助手的开发与优化<br>
-                            - 负责嵌入式语音系统的性能优化
+                        <div class="education-item">
+                            <div class="education-degree">本科</div>
+                            <div class="education-institution">英国伯明翰大学</div>
+                            <div class="education-major">电子电气工程与计算机工程 (EECE)</div>
+                            <div class="education-year">2013 - 2015</div>
+                        </div>
+                        <div class="education-item">
+                            <div class="education-degree">本科</div>
+                            <div class="education-institution">华中科技大学</div>
+                            <div class="education-major">通信工程</div>
+                            <div class="education-year">2011 - 2013</div>
                         </div>
                     </div>
                 </div>
@@ -1078,7 +1043,7 @@
         </div>
     </section>
 
-    <!-- 项目 -->
+    <!-- 项目 -->    <!-- 项目 -->
     <section id="projects">
         <div class="container">
             <div class="section-title">
@@ -1087,54 +1052,62 @@
             </div>
             <div class="projects-grid">
                 <div class="project-card">
+                    <div class="project-image">🎧</div>
+                    <div class="project-content">
+                        <div class="project-title">番茄小说有声书</div>
+                        <div class="project-description">从 0 到 1 搭建自动化单播、多播有声书方案，支持多种音色选择</div>
+                        <div class="project-tags">
+                            <span class="tag">TTS</span>
+                            <span class="tag">Audio Synthesis</span>
+                            <span class="tag">Text-to-Speech</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">🎥</div>
+                    <div class="project-content">
+                        <div class="project-title">剪映文本朗读</div>
+                        <div class="project-description">上线抖音小姐姐、东北老铁、陕西佟掌柜等热门音色，支持方言和特色发音</div>
+                        <div class="project-tags">
+                            <span class="tag">Voice Cloning</span>
+                            <span class="tag">Dialect Synthesis</span>
+                            <span class="tag">Speech Processing</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
                     <div class="project-image">🤖</div>
                     <div class="project-content">
-                        <div class="project-title">大语言模型预训练平台</div>
-                        <div class="project-description">构建了大规模语言模型预训练平台，支持 BERT、GPT 等模型的训练与微调</div>
-                        <div class="project-tags">
-                            <span class="tag">PyTorch</span>
-                            <span class="tag">DeepSpeed</span>
-                            <span class="tag">Megatron</span>
-                            <span class="tag">Hugging Face</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">📚</div>
-                    <div class="project-content">
-                        <div class="project-title">知识图谱构建系统</div>
-                        <div class="project-description">开发了自动化知识图谱构建系统，支持从文本中提取实体关系</div>
-                        <div class="project-tags">
-                            <span class="tag">BERT</span>
-                            <span class="tag">NER</span>
-                            <span class="tag">Knowledge Graph</span>
-                            <span class="tag">DGL</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">💬</div>
-                    <div class="project-content">
-                        <div class="project-title">智能问答系统</div>
-                        <div class="project-description">基于大模型的智能问答系统，支持多轮对话与知识检索</div>
+                        <div class="project-title">豆包语音</div>
+                        <div class="project-description">为豆包大模型提供语音能力，包括朗读、实时通话、唱歌和方言支持</div>
                         <div class="project-tags">
                             <span class="tag">LLM</span>
-                            <span class="tag">RAG</span>
-                            <span class="tag">LangChain</span>
-                            <span class="tag">Prompt Engineering</span>
+                            <span class="tag">Voice Dialogue</span>
+                            <span class="tag">Multi-modal</span>
                         </div>
                     </div>
                 </div>
                 <div class="project-card">
-                    <div class="project-image">⚡</div>
+                    <div class="project-image">🎵</div>
                     <div class="project-content">
-                        <div class="project-title">模型压缩与加速</div>
-                        <div class="project-description">研究并实现了大模型压缩与加速技术，提升推理性能</div>
+                        <div class="project-title">Audio Caption</div>
+                        <div class="project-description">开发基于多模态大模型的音频描述生成系统，实现文本到语音的精准转换</div>
                         <div class="project-tags">
-                            <span class="tag">LoRA</span>
-                            <span class="tag">QLoRA</span>
-                            <span class="tag">TensorRT</span>
-                            <span class="tag">ONNX</span>
+                            <span class="tag">Audio Captioning</span>
+                            <span class="tag">Multi-modal Generation</span>
+                            <span class="tag">Speech Synthesis</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">🏮</div>
+                    <div class="project-content">
+                        <div class="project-title">方言 TTS 系统</div>
+                        <div class="project-description">开发支持多种中国方言的语音合成系统，提升方言识别和合成精度</div>
+                        <div class="project-tags">
+                            <span class="tag">Dialect Processing</span>
+                            <span class="tag">Speech Synthesis</span>
+                            <span class="tag">Natural Language</span>
                         </div>
                     </div>
                 </div>
@@ -1663,7 +1636,7 @@
         <div class="container">
             <ul class="footer-links">
                 <li><a href="#about">关于</a></li>
-                <li><a href="#skills">技能</a></li>
+
                 <li><a href="#experience">经验</a></li>
                 <li><a href="#projects">项目</a></li>
                 <li><a href="#publications">学术成果</a></li>
