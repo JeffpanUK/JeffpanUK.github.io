@@ -444,10 +444,23 @@
             background: linear-gradient(180deg, var(--primary), var(--accent));
         }
 
+        /* 右侧时间轴样式 */
+        .column:nth-child(2) .timeline::before {
+            left: auto;
+            right: 0;
+            transform: translateX(50%);
+        }
+
         .timeline-item {
             margin-bottom: 60px;
             position: relative;
             padding-left: 60px;
+        }
+
+        /* 右侧时间轴的项目样式 */
+        .column:nth-child(2) .timeline-item {
+            padding-left: 0;
+            padding-right: 60px;
         }
 
         .timeline-content {
@@ -457,6 +470,12 @@
             border: 1px solid var(--border);
             transition: all 0.3s ease;
             width: 100%;
+        }
+
+        /* 右侧时间轴的内容样式 */
+        .column:nth-child(2) .timeline-content {
+            margin-left: 0;
+            margin-right: 0;
         }
 
         .timeline-item:nth-child(odd) .timeline-content {
@@ -480,6 +499,13 @@
             font-weight: 600;
             font-size: 0.875rem;
             white-space: nowrap;
+        }
+
+        /* 右侧时间轴的日期样式 */
+        .column:nth-child(2) .timeline-date {
+            left: auto;
+            right: -60px;
+            transform: translateX(100%);
         }
 
         .timeline-title {
@@ -1019,12 +1045,12 @@
                         <div class="timeline-item">
                             <div class="timeline-content">
                                 <div class="timeline-date">2023 - 至今</div>
-                                <div class="timeline-title">语音生成应用 Leader</div>
+                                <div class="timeline-title">语音算法专家</div>
                                 <div class="timeline-company">字节跳动 - Seed</div>
                                 <div class="timeline-description">
                                     - 豆包语音：负责豆包大模型的语音能力交付，包括语音朗读、实时通话、唱歌和方言支持<br>
                                     - Audio Caption：开发基于多模态大模型的音频描述生成系统<br>
-                                    - 领导团队搭建语音生成技术平台，支持多种应用场景
+                                    - 领导语音交互生成团队，支持多种应用场景
                                 </div>
                             </div>
                         </div>
@@ -1058,24 +1084,39 @@
                 <!-- 教育背景 -->
                 <div class="column">
                     <h3>教育背景</h3>
-                    <div class="education-content">
-                        <div class="education-item">
-                            <div class="education-degree">硕士</div>
-                            <div class="education-institution">英国剑桥大学</div>
-                            <div class="education-major">机器学习 (Machine Learning)</div>
-                            <div class="education-year">2015 - 2016</div>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-date">2015 - 2016</div>
+                            <div class="timeline-content">
+                                <div class="timeline-title">硕士</div>
+                                <div class="timeline-company">英国剑桥大学</div>
+                                <div class="timeline-description">
+                                    机器学习 (Machine Learning)<br>
+                                    专注于机器学习算法和深度学习研究
+                                </div>
+                            </div>
                         </div>
-                        <div class="education-item">
-                            <div class="education-degree">本科</div>
-                            <div class="education-institution">英国伯明翰大学</div>
-                            <div class="education-major">电子电气工程与计算机工程 (EECE)</div>
-                            <div class="education-year">2013 - 2015</div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">2013 - 2015</div>
+                            <div class="timeline-content">
+                                <div class="timeline-title">本科</div>
+                                <div class="timeline-company">英国伯明翰大学</div>
+                                <div class="timeline-description">
+                                    电子电气工程与计算机工程 (EECE)<br>
+                                    学习电子工程和计算机科学的基础知识
+                                </div>
+                            </div>
                         </div>
-                        <div class="education-item">
-                            <div class="education-degree">本科</div>
-                            <div class="education-institution">华中科技大学</div>
-                            <div class="education-major">通信工程</div>
-                            <div class="education-year">2011 - 2013</div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">2011 - 2013</div>
+                            <div class="timeline-content">
+                                <div class="timeline-title">本科</div>
+                                <div class="timeline-company">华中科技大学</div>
+                                <div class="timeline-description">
+                                    通信工程<br>
+                                    学习通信系统和信号处理的基础知识
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
