@@ -11,6 +11,39 @@
 - 📄 **内容管理**: 易于维护和扩展的内容结构
 - 🔧 **技术先进**: 使用最新的前端技术和设计原则
 
+## 📧 邮件通知配置
+
+### 1. 设置 QQ 邮箱授权码
+
+1. 登录 QQ 邮箱
+2. 点击 "设置" -> "账户"
+3. 找到 "POP3/IMAP/SMTP/Exchange/CardDAV/CalDAV服务"
+4. 开启 "POP3/SMTP服务" 和 "IMAP/SMTP服务"
+5. 点击 "生成授权码"，按照提示操作
+6. 保存生成的授权码
+
+### 2. 设置 GitHub Secrets
+
+1. 进入项目的 GitHub 仓库页面
+2. 点击 "Settings" -> "Secrets and variables" -> "Actions"
+3. 点击 "New repository secret"
+4. 添加以下 Secrets：
+   
+   - **SENDER_EMAIL**: 您的 QQ 邮箱地址（如 2359501@qq.com）
+   - **SENDER_PASSWORD**: 您刚刚生成的授权码
+   - **TO_EMAIL**: 收件邮箱地址（如 2359501@qq.com）
+
+### 3. 使用方法
+
+- 当有新 Issue 或评论时，系统会自动发送邮件通知
+- 联系表单当前使用模拟提交，如需真实邮件发送，建议使用 EmailJS 或其他服务
+
+### 注意事项
+
+- 授权码不是 QQ 密码，而是专门用于邮件客户端的密码
+- 如果授权码过期，需要重新生成
+- 确保邮箱服务未被限制
+
 ## 🚀 快速开始
 
 ### 本地开发
