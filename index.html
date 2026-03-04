@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jeff Pan - 大模型算法专家</title>
+    <title>潘俊杰（Jeff） - 大模型算法专家</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -15,15 +15,15 @@
         }
 
         :root {
-            --primary: #6366f1;
-            --secondary: #8b5cf6;
-            --accent: #ec4899;
-            --bg-dark: #0f172a;
-            --bg-card: #1e293b;
-            --text-primary: #f1f5f9;
-            --text-secondary: #cbd5e1;
-            --border: #334155;
-            --glow: 0 0 20px rgba(99, 102, 241, 0.3);
+            --primary: #007bff;
+            --secondary: #00d4ff;
+            --accent: #ff6b9d;
+            --bg-dark: #0a1929;
+            --bg-card: #162d47;
+            --text-primary: #f8f9fa;
+            --text-secondary: #a0aab8;
+            --border: #2a3f5f;
+            --glow: 0 0 30px rgba(0, 123, 255, 0.4);
         }
 
         body {
@@ -107,8 +107,28 @@
             color: var(--primary);
         }
         
+        .nav-links a {
+            position: relative;
+            overflow: hidden;
+        }
+        
         .nav-links a:hover {
             color: var(--primary);
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            transition: width 0.3s ease;
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
         }
 
         .nav-links a:hover::after {
@@ -122,6 +142,27 @@
             align-items: center;
             position: relative;
             padding-top: 70px;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(0, 123, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(0, 212, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 40% 20%, rgba(255, 107, 157, 0.08) 0%, transparent 50%);
+            z-index: -1;
+            animation: gradientMove 20s ease infinite;
+        }
+        
+        @keyframes gradientMove {
+            0%, 100% { transform: translate(0, 0); }
+            50% { transform: translate(0, -20px); }
         }
 
         .hero-content {
@@ -904,7 +945,7 @@
     <!-- 导航栏 -->
     <nav>
         <div class="nav-container">
-            <div class="logo">Jeff Pan</div>
+            <div class="logo">潘俊杰（Jeff）</div>
             <ul class="nav-links">
                 <li><a href="#about">关于我</a></li>
                 <li><a href="#education">教育背景</a></li>
@@ -913,7 +954,7 @@
                 <li><a href="#projects">项目</a></li>
                 <li><a href="#publications">学术成果</a></li>
                 <li><a href="mailto:kevinjjp@gmail.com" class="email-link">邮箱</a></li>
-            </ul>
+            </
         </div>
     </nav>
 
@@ -921,7 +962,7 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1>你好，我是 Jeff Pan</h1>
+                <h1>你好，我是 潘俊杰（Jeff）</h1>
                 <div class="role">大模型算法专家</div>
                 <p class="subtitle">专注于大语言模型、自然语言处理、机器学习算法研究与应用</p>
                 <div class="contact-info">
@@ -1042,7 +1083,13 @@
             <div class="projects-grid">
                 <!-- 业务项目 -->
                 <div class="project-card">
-                    <div class="project-image">📖</div>
+                    <div class="project-image">
+                        <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="60" cy="60" r="55" fill="none" stroke="#ff6b00" stroke-width="2" opacity="0.3"/>
+                            <rect x="30" y="30" width="60" height="60" fill="#ff6b00" rx="8"/>
+                            <text x="60" y="65" font-family="Arial, sans-serif" font-size="40" font-weight="bold" fill="white" text-anchor="middle">📖</text>
+                        </svg>
+                    </div>
                     <div class="project-content">
                         <div class="project-title">番茄小说有声书</div>
                         <div class="project-description">从 0 到 1 搭建自动化单播、多播有声书方案，支持多种音色选择</div>
@@ -1054,7 +1101,13 @@
                     </div>
                 </div>
                 <div class="project-card">
-                    <div class="project-image">🤖</div>
+                    <div class="project-image">
+                        <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="60" cy="60" r="55" fill="none" stroke="#007bff" stroke-width="2" opacity="0.3"/>
+                            <rect x="30" y="30" width="60" height="60" fill="#007bff" rx="8"/>
+                            <text x="60" y="65" font-family="Arial, sans-serif" font-size="40" font-weight="bold" fill="white" text-anchor="middle">🤖</text>
+                        </svg>
+                    </div>
                     <div class="project-content">
                         <div class="project-title">豆包语音</div>
                         <div class="project-description">为豆包大模型提供语音能力，包括朗读、实时通话、唱歌和方言支持</div>
@@ -1066,7 +1119,13 @@
                     </div>
                 </div>
                 <div class="project-card">
-                    <div class="project-image">🎬</div>
+                    <div class="project-image">
+                        <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="60" cy="60" r="55" fill="none" stroke="#ff4d4f" stroke-width="2" opacity="0.3"/>
+                            <rect x="30" y="30" width="60" height="60" fill="#ff4d4f" rx="8"/>
+                            <text x="60" y="65" font-family="Arial, sans-serif" font-size="40" font-weight="bold" fill="white" text-anchor="middle">🎬</text>
+                        </svg>
+                    </div>
                     <div class="project-content">
                         <div class="project-title">剪映文本朗读</div>
                         <div class="project-description">上线抖音小姐姐、东北老铁、陕西佟掌柜等热门音色，支持方言和特色发音</div>
@@ -1080,7 +1139,13 @@
                 
                 <!-- 技术项目 -->
                 <div class="project-card">
-                    <div class="project-image">🌍</div>
+                    <div class="project-image">
+                        <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="60" cy="60" r="55" fill="none" stroke="#00d4ff" stroke-width="2" opacity="0.3"/>
+                            <rect x="30" y="30" width="60" height="60" fill="#00d4ff" rx="8"/>
+                            <text x="60" y="65" font-family="Arial, sans-serif" font-size="40" font-weight="bold" fill="white" text-anchor="middle">🌍</text>
+                        </svg>
+                    </div>
                     <div class="project-content">
                         <div class="project-title">多语种 TTS 系统</div>
                         <div class="project-description">支持中、英、日、韩、法、德、意、西、阿、越等共计15语种的语音合成系统</div>
@@ -1092,7 +1157,13 @@
                     </div>
                 </div>
                 <div class="project-card">
-                    <div class="project-image">🎵</div>
+                    <div class="project-image">
+                        <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="60" cy="60" r="55" fill="none" stroke="#a855f7" stroke-width="2" opacity="0.3"/>
+                            <rect x="30" y="30" width="60" height="60" fill="#a855f7" rx="8"/>
+                            <text x="60" y="65" font-family="Arial, sans-serif" font-size="40" font-weight="bold" fill="white" text-anchor="middle">🎵</text>
+                        </svg>
+                    </div>
                     <div class="project-content">
                         <div class="project-title">Audio Caption</div>
                         <div class="project-description">开发基于多模态大模型的音频描述生成系统，实现文本到语音的精准转换</div>
@@ -1104,7 +1175,13 @@
                     </div>
                 </div>
                 <div class="project-card">
-                    <div class="project-image">🏮</div>
+                    <div class="project-image">
+                        <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="60" cy="60" r="55" fill="none" stroke="#ff9500" stroke-width="2" opacity="0.3"/>
+                            <rect x="30" y="30" width="60" height="60" fill="#ff9500" rx="8"/>
+                            <text x="60" y="65" font-family="Arial, sans-serif" font-size="40" font-weight="bold" fill="white" text-anchor="middle">🏮</text>
+                        </svg>
+                    </div>
                     <div class="project-content">
                         <div class="project-title">方言 TTS 系统</div>
                         <div class="project-description">开发支持多种中国方言的语音合成系统，提升方言识别和合成精度</div>
@@ -1250,404 +1327,9 @@
                     <span class="tag">Speech Synthesis</span><span class="tag">Speaker Recognition</span><span class="tag">Audiobook</span>
                 </div>
             </div></div>
-                <p class="publication-overview">该研究探讨了大语言模型在自然语言理解任务中的应用，包括文本分类、情感分析和语义理解，提出了新的预训练和微调方法。</p>
-                <div class="publication-tags">
-                    <span class="tag">NLP</span><span class="tag">Machine Learning</span>
-                </div>
-            </div>
-            <div class="publication-card compact">
-                <h3 class="publication-title">
-                    <a href="#" target="_blank">Knowledge Representation and Knowledge Graph Construction Methods</a>
-                </h3>
-                <div class="publication-meta">
-                    <span class="publication-authors">Pan J., Wang Y., Chen H.</span>
-                    <span class="publication-journal">Journal of Machine Learning Research, 2022</span>
-                    <span class="publication-citations">引用: <span class="citation-count">134</span></span>
-                </div>
-                <p class="publication-overview">本文研究了知识表示和知识图谱构建的最新方法，提出了基于图神经网络的知识图谱构建技术，提高了知识获取和推理的准确性。</p>
-                <div class="publication-tags">
-                    <span class="tag">Knowledge Graph</span><span class="tag">Research</span>
-                </div>
-            </div>
-            <div class="publication-card compact">
-                <h3 class="publication-title">
-                    <a href="#" target="_blank">Deep Learning Model Compression and Acceleration Techniques</a>
-                </h3>
-                <div class="publication-meta">
-                    <span class="publication-authors">Pan J., Liu C., Wu S.</span>
-                    <span class="publication-journal">AAAI Conference on Artificial Intelligence, 2021</span>
-                    <span class="publication-citations">引用: <span class="citation-count">142</span></span>
-                </div>
-                <p class="publication-overview">该论文介绍了深度学习模型压缩和加速的关键技术，包括剪枝、量化和蒸馏等方法，有效降低了模型的计算和存储成本。</p>
-                <div class="publication-tags">
-                    <span class="tag">Optimization</span><span class="tag">Deep Learning</span>
-                </div>
-            </div>
-            <div class="publication-card compact">
-                <h3 class="publication-title">
-                    <a href="#" target="_blank">Transfer Learning Methods in Natural Language Processing</a>
-                </h3>
-                <div class="publication-meta">
-                    <span class="publication-authors">Pan J., Yang Z., Wang H.</span>
-                    <span class="publication-journal">ACL 2020: Annual Meeting of the Association for Computational Linguistics, 2020</span>
-                    <span class="publication-citations">引用: <span class="citation-count">112</span></span>
-                </div>
-                <p class="publication-overview">本文研究了自然语言处理中的迁移学习方法，提出了跨任务和跨领域的知识迁移技术，提高了模型在资源有限场景下的性能。</p>
-                <div class="publication-tags">
-                    <span class="tag">NLP</span><span class="tag">Machine Learning</span>
-                </div>
-            </div>
-            <div class="publication-card compact">
-                <h3 class="publication-title">
-                    <a href="https://github.com/JeffpanUK/GPT2-Chinese" target="_blank">Chinese GPT-2: Pre-trained Language Model for Chinese Text Generation</a>
-                </h3>
-                <div class="publication-meta">
-                    <span class="publication-authors">Pan J.</span>
-                    <span class="publication-journal">GitHub Repository, 2020</span>
-                    <span class="publication-citations">引用: <span class="citation-count">128</span></span>
-                </div>
-                <p class="publication-overview">该项目实现了中文 GPT-2 预训练语言模型，提供了完整的训练和推理代码。支持多种文本生成任务，包括文本续写、对话生成和文章生成等。</p>
-                <div class="publication-tags">
-                    <span class="tag">NLP</span><span class="tag">Language Models</span>
-                </div>
-            </div>
-            <div class="publication-card compact">
-                <h3 class="publication-title">
-                    <a href="https://github.com/JeffpanUK/mellotron" target="_blank">Mellotron: A Multi-Speaker Emotional Voice Synthesis System</a>
-                </h3>
-                <div class="publication-meta">
-                    <span class="publication-authors">Pan J., NVIDIA Research</span>
-                    <span class="publication-journal">GitHub Repository, 2019</span>
-                    <span class="publication-citations">引用: <span class="citation-count">95</span></span>
-                </div>
-                <p class="publication-overview">Mellotron 是一个基于 Tacotron 2 的多说话人情感语音合成系统，能够生成具有情感表达的语音。支持声音克隆和多语言合成。</p>
-                <div class="publication-tags">
-                    <span class="tag">Speech Synthesis</span><span class="tag">Multi-speaker</span>
-                </div>
-            </div>
-            <div class="publication-card compact">
-                <h3 class="publication-title">
-                    <a href="https://github.com/JeffpanUK/chinese-xinhua" target="_blank">Chinese Xinhua Dictionary and NLP Resources</a>
-                </h3>
-                <div class="publication-meta">
-                    <span class="publication-authors">Pan J.</span>
-                    <span class="publication-journal">GitHub Repository, 2018</span>
-                    <span class="publication-citations">引用: <span class="citation-count">82</span></span>
-                </div>
-                <p class="publication-overview">该项目提供了完整的新华字典、成语词典、歇后语库等中文 NLP 资源，支持汉字查询、词语解释和词汇分析。</p>
-                <div class="publication-tags">
-                    <span class="tag">Knowledge Graph</span><span class="tag">NLP</span>
-                </div>
-            </div>
-            <div class="publication-card compact">
-                <h3 class="publication-title">
-                    <a href="https://github.com/JeffpanUK/nlp_storeroom" target="_blank">NLP Storeroom: Collection of NLP Resources and Tools</a>
-                </h3>
-                <div class="publication-meta">
-                    <span class="publication-authors">Pan J.</span>
-                    <span class="publication-journal">GitHub Repository, 2017</span>
-                    <span class="publication-citations">引用: <span class="citation-count">64</span></span>
-                </div>
-                <p class="publication-overview">NLP Storeroom 是一个开源 NLP 资源集合，包含各种预训练模型、数据集和工具库，支持快速开发 NLP 应用。</p>
-                <div class="publication-tags">
-                    <span class="tag">NLP</span><span class="tag">Open Source</span>
-                </div>
-            </div></div>
-                <p class="publication-overview">该研究探讨了大语言模型在自然语言理解任务中的应用，包括文本分类、情感分析和语义理解，提出了新的预训练和微调方法。</p>
-                <div class="publication-tags">
-                    <span class="tag">LLM</span><span class="tag">NLP</span><span class="tag">Understanding</span>
-                </div>
-            </div>
-            <div class="publication-card compact">
-                <h3 class="publication-title">
-                    <a href="#" target="_blank">Knowledge Representation and Knowledge Graph Construction Methods</a>
-                </h3>
-                <div class="publication-meta">
-                    <span class="publication-authors">Pan J., Wang Y., Chen H.</span>
-                    <span class="publication-journal">Journal of Machine Learning Research, 2022</span>
-                    <span class="publication-citations">引用: <span class="citation-count">134</span></span>
-                </div>
-                <p class="publication-overview">本文研究了知识表示和知识图谱构建的最新方法，提出了基于图神经网络的知识图谱构建技术，提高了知识获取和推理的准确性。</p>
-                <div class="publication-tags">
-                    <span class="tag">Knowledge Representation</span><span class="tag">Graph</span>
-                </div>
-            </div>
-            <div class="publication-card compact">
-                <h3 class="publication-title">
-                    <a href="#" target="_blank">Deep Learning Model Compression and Acceleration Techniques</a>
-                </h3>
-                <div class="publication-meta">
-                    <span class="publication-authors">Pan J., Liu C., Wu S.</span>
-                    <span class="publication-journal">AAAI Conference on Artificial Intelligence, 2021</span>
-                    <span class="publication-citations">引用: <span class="citation-count">142</span></span>
-                </div>
-                <p class="publication-overview">该论文介绍了深度学习模型压缩和加速的关键技术，包括剪枝、量化和蒸馏等方法，有效降低了模型的计算和存储成本。</p>
-                <div class="publication-tags">
-                    <span class="tag">Model Compression</span><span class="tag">Deep Learning</span>
-                </div>
-            </div>
-            <div class="publication-card compact">
-                <h3 class="publication-title">
-                    <a href="https://github.com/JeffpanUK/GPT2-Chinese" target="_blank">Chinese GPT-2: Pre-trained Language Model for Chinese Text Generation</a>
-                </h3>
-                <div class="publication-meta">
-                    <span class="publication-authors">Pan J.</span>
-                    <span class="publication-journal">GitHub Repository, 2020</span>
-                    <span class="publication-citations">引用: <span class="citation-count">128</span></span>
-                </div>
-                <p class="publication-overview">该项目实现了中文 GPT-2 预训练语言模型，提供了完整的训练和推理代码。支持多种文本生成任务，包括文本续写、对话生成和文章生成等。</p>
-                <div class="publication-tags">
-                    <span class="tag">NLP</span><span class="tag">GPT-2</span><span class="tag">Language Models</span>
-                </div>
-            </div>
-            <div class="publication-card compact">
-                <h3 class="publication-title">
-                    <a href="#" target="_blank">Transfer Learning Methods in Natural Language Processing</a>
-                </h3>
-                <div class="publication-meta">
-                    <span class="publication-authors">Pan J., Yang Z., Wang H.</span>
-                    <span class="publication-journal">ACL 2020: Annual Meeting of the Association for Computational Linguistics, 2020</span>
-                    <span class="publication-citations">引用: <span class="citation-count">112</span></span>
-                </div>
-                <p class="publication-overview">本文研究了自然语言处理中的迁移学习方法，提出了跨任务和跨领域的知识迁移技术，提高了模型在资源有限场景下的性能。</p>
-                <div class="publication-tags">
-                    <span class="tag">Transfer Learning</span><span class="tag">NLP</span>
-                </div>
-            </div>
-            <div class="publication-card compact">
-                <h3 class="publication-title">
-                    <a href="https://github.com/JeffpanUK/mellotron" target="_blank">Mellotron: A Multi-Speaker Emotional Voice Synthesis System</a>
-                </h3>
-                <div class="publication-meta">
-                    <span class="publication-authors">Pan J., NVIDIA Research</span>
-                    <span class="publication-journal">GitHub Repository, 2019</span>
-                    <span class="publication-citations">引用: <span class="citation-count">95</span></span>
-                </div>
-                <p class="publication-overview">Mellotron 是一个基于 Tacotron 2 的多说话人情感语音合成系统，能够生成具有情感表达的语音。支持声音克隆和多语言合成。</p>
-                <div class="publication-tags">
-                    <span class="tag">Speech Synthesis</span><span class="tag">Multi-speaker</span><span class="tag">TTS</span>
-                </div>
-            </div>
-            <div class="publication-card compact">
-                <h3 class="publication-title">
-                    <a href="https://github.com/JeffpanUK/chinese-xinhua" target="_blank">Chinese Xinhua Dictionary and NLP Resources</a>
-                </h3>
-                <div class="publication-meta">
-                    <span class="publication-authors">Pan J.</span>
-                    <span class="publication-journal">GitHub Repository, 2018</span>
-                    <span class="publication-citations">引用: <span class="citation-count">82</span></span>
-                </div>
-                <p class="publication-overview">该项目提供了完整的新华字典、成语词典、歇后语库等中文 NLP 资源，支持汉字查询、词语解释和词汇分析。</p>
-                <div class="publication-tags">
-                    <span class="tag">Knowledge Graph</span><span class="tag">NLP</span><span class="tag">Chinese Language</span>
-                </div>
-            </div>
-            <div class="publication-card compact">
-                <h3 class="publication-title">
-                    <a href="https://github.com/JeffpanUK/nlp_storeroom" target="_blank">NLP Storeroom: Collection of NLP Resources and Tools</a>
-                </h3>
-                <div class="publication-meta">
-                    <span class="publication-authors">Pan J.</span>
-                    <span class="publication-journal">GitHub Repository, 2017</span>
-                    <span class="publication-citations">引用: <span class="citation-count">64</span></span>
-                </div>
-                <p class="publication-overview">NLP Storeroom 是一个开源 NLP 资源集合，包含各种预训练模型、数据集和工具库，支持快速开发 NLP 应用。</p>
-                <div class="publication-tags">
-                    <span class="tag">NLP</span><span class="tag">Open Source</span><span class="tag">Toolkit</span>
-                </div>
-            </div></div>
-                <div class="publication-authors">Pan J., Zhang L., Li X.</div>
-                <div class="publication-info">Conference on Empirical Methods in Natural Language Processing, 2023 - Cited by 156</div>
-                <div class="publication-links">
-                    <a href="#" target="_blank">论文链接</a>
-                    <a href="#">代码</a>
-                    <a href="#">演示</a>
-                </div>
-                <div class="publication-tags">
-                    <span class="tag">LLM</span><span class="tag">NLP</span><span class="tag">Understanding</span>
-                </div>
-            </div>
-            <div class="publication-card">
-                <div class="publication-title">知识表示与知识图谱构建方法</div>
-                <div class="publication-authors">Pan J., Wang Y., Chen H.</div>
-                <div class="publication-info">Journal of Machine Learning Research, 2022 - Cited by 134</div>
-                <div class="publication-links">
-                    <a href="#" target="_blank">论文链接</a>
-                    <a href="#">代码</a>
-                    <a href="#">演示</a>
-                </div>
-                <div class="publication-tags">
-                    <span class="tag">Knowledge Representation</span><span class="tag">Graph</span>
-                </div>
-            </div>
-            <div class="publication-card">
-                <div class="publication-title">深度学习模型压缩与加速技术</div>
-                <div class="publication-authors">Pan J., Liu C., Wu S.</div>
-                <div class="publication-info">AAAI Conference on Artificial Intelligence, 2021 - Cited by 142</div>
-                <div class="publication-links">
-                    <a href="#" target="_blank">论文链接</a>
-                    <a href="#">代码</a>
-                    <a href="#">演示</a>
-                </div>
-                <div class="publication-tags">
-                    <span class="tag">Model Compression</span><span class="tag">Deep Learning</span>
-                </div>
-            </div>
-            <div class="publication-card">
-                <div class="publication-title">中文 GPT-2 预训练语言模型研究与实现</div>
-                <div class="publication-authors">Pan J.</div>
-                <div class="publication-info">International Journal of Natural Language Processing, 2020 - Cited by 128</div>
-                <div class="publication-links">
-                    <a href="https://github.com/JeffpanUK/GPT2-Chinese" target="_blank">论文链接</a>
-                    <a href="#">代码</a>
-                    <a href="#">演示</a>
-                </div>
-                <div class="publication-tags">
-                    <span class="tag">NLP</span><span class="tag">GPT-2</span><span class="tag">Language Models</span>
-                </div>
-            </div>
-            <div class="publication-card">
-                <div class="publication-title">自然语言处理中的迁移学习方法研究</div>
-                <div class="publication-authors">Pan J., Yang Z., Wang H.</div>
-                <div class="publication-info">ACL 2020: Annual Meeting of the Association for Computational Linguistics, 2020 - Cited by 112</div>
-                <div class="publication-links">
-                    <a href="#" target="_blank">论文链接</a>
-                    <a href="#">代码</a>
-                    <a href="#">演示</a>
-                </div>
-                <div class="publication-tags">
-                    <span class="tag">Transfer Learning</span><span class="tag">NLP</span>
-                </div>
-            </div>
-            <div class="publication-card">
-                <div class="publication-title">Mellotron: 多说话人情感语音合成系统</div>
-                <div class="publication-authors">Pan J., NVIDIA Research</div>
-                <div class="publication-info">IEEE International Conference on Acoustics, Speech and Signal Processing, 2019 - Cited by 95</div>
-                <div class="publication-links">
-                    <a href="https://github.com/JeffpanUK/mellotron" target="_blank">论文链接</a>
-                    <a href="#">代码</a>
-                    <a href="#">演示</a>
-                </div>
-                <div class="publication-tags">
-                    <span class="tag">Speech Synthesis</span><span class="tag">Multi-speaker</span><span class="tag">TTS</span>
-                </div>
-            </div>
-            <div class="publication-card">
-                <div class="publication-title">中文知识图谱构建与自然语言处理基础资源</div>
-                <div class="publication-authors">Pan J.</div>
-                <div class="publication-info">Chinese Journal of Computer Science, 2018 - Cited by 82</div>
-                <div class="publication-links">
-                    <a href="https://github.com/JeffpanUK/chinese-xinhua" target="_blank">论文链接</a>
-                    <a href="#">代码</a>
-                    <a href="#">演示</a>
-                </div>
-                <div class="publication-tags">
-                    <span class="tag">Knowledge Graph</span><span class="tag">NLP</span><span class="tag">Chinese Language</span>
-                </div>
-            </div>
-            <div class="publication-card">
-                <div class="publication-title">NLP 开源资源集合与工具库</div>
-                <div class="publication-authors">Pan J.</div>
-                <div class="publication-info">Journal of Open Source Software, 2017 - Cited by 64</div>
-                <div class="publication-links">
-                    <a href="https://github.com/JeffpanUK/nlp_storeroom" target="_blank">论文链接</a>
-                    <a href="#">代码</a>
-                    <a href="#">演示</a>
-                </div>
-                <div class="publication-tags">
-                    <span class="tag">NLP</span><span class="tag">Open Source</span><span class="tag">Toolkit</span>
-                </div>
-            </div></div>
-                <div class="publication-info">International Conference on Natural Language Processing, 2023</div>
-                <div class="publication-links">
-                    <a href="#">论文链接</a>
-                    <a href="#">代码</a>
-                    <a href="#">演示</a>
-                </div>
-            </div>
-
-                <div class="publication-authors">Pan J., Wang Y., Chen H.</div>
-                <div class="publication-info">Journal of Machine Learning Research, 2022</div>
-                <div class="publication-links">
-                    <a href="#">论文链接</a>
-                    <a href="#">代码</a>
-                </div>
-            </div>
-
-                <div class="publication-authors">Pan J., Liu C., Wu S.</div>
-                <div class="publication-info">AAAI Conference on Artificial Intelligence, 2021</div>
-                <div class="publication-links">
-                    <a href="#">论文链接</a>
-                    <a href="#">代码</a>
-                </div>
-            </div>
-
-                <div class="publication-authors">Pan J., Zhang Y., Liu M.</div>
-                <div class="publication-info">International Conference on Speech Processing, 2020</div>
-                <div class="publication-links">
-                    <a href="#">论文链接</a>
-                    <a href="https://github.com/JeffpanUK/mellotron">代码</a>
-                    <a href="#">演示</a>
-                </div>
-            </div>
-
-                <div class="publication-authors">Pan J., Zhao K., Tang D.</div>
-                <div class="publication-info">Computer Science Review, 2019</div>
-                <div class="publication-links">
-                    <a href="#">论文链接</a>
-                    <a href="https://github.com/JeffpanUK/GPT2-Chinese">代码</a>
-                </div>
-            </div>
-
-                <div class="publication-authors">Pan J., Yang Z., Wang H.</div>
-                <div class="publication-info">Chinese Journal of Computers, 2018</div>
-                <div class="publication-links">
-                    <a href="#">论文链接</a>
-                    <a href="https://github.com/JeffpanUK/chinese-xinhua">代码</a>
-                    <a href="#">数据集</a>
-                </div>
-            </div></div>
-
-                <div class="publication-authors">Pan J., Zhang L., Li X., et al.</div>
-                <div class="publication-info">International Conference on Natural Language Processing, 2023</div>
-                <div class="publication-links">
-                    <a href="#">论文链接</a>
-                    <a href="#">代码</a>
-                    <a href="#">演示</a>
-                </div>
-            </div>
-
-                <div class="publication-authors">Pan J., Wang Y., Chen H.</div>
-                <div class="publication-info">Journal of Machine Learning Research, 2022</div>
-                <div class="publication-links">
-                    <a href="#">论文链接</a>
-                    <a href="#">代码</a>
-                </div>
-            </div>
-
-                <div class="publication-authors">Pan J., Liu C., Wu S.</div>
-                <div class="publication-info">AAAI Conference on Artificial Intelligence, 2021</div>
-                <div class="publication-links">
-                    <a href="#">论文链接</a>
-                    <a href="#">代码</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 联系方式 -->    <!-- 页脚 -->
-    <footer>
-        <div class="container">
-            <ul class="footer-links">
-                <li><a href="#about">关于</a></li>
-
-                <li><a href="#experience">经验</a></li>
-                <li><a href="#projects">项目</a></li>
-                <li><a href="#publications">学术成果</a></li>
-
-            </ul>ul>
+                <p class="publication-overview">
             <div class="copyright">
-                © 2024 Jeff Pan. 保留所有权利.
+                © 2024 潘俊杰（Jeff）. 保留所有权利.
             </div>
         </div>
     </footer>
