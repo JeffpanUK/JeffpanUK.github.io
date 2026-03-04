@@ -430,14 +430,14 @@
         /* 工作经验 */
         .timeline {
             position: relative;
-            max-width: 800px;
-            margin: 0 auto;
+            max-width: 100%;
+            margin: 0;
         }
 
         .timeline::before {
             content: '';
             position: absolute;
-            left: 50%;
+            left: 0;
             transform: translateX(-50%);
             width: 2px;
             height: 100%;
@@ -447,6 +447,7 @@
         .timeline-item {
             margin-bottom: 60px;
             position: relative;
+            padding-left: 60px;
         }
 
         .timeline-content {
@@ -455,25 +456,30 @@
             border-radius: 12px;
             border: 1px solid var(--border);
             transition: all 0.3s ease;
-            width: calc(50% - 40px);
+            width: 100%;
         }
 
         .timeline-item:nth-child(odd) .timeline-content {
-            margin-left: auto;
-            margin-right: 40px;
+            margin-left: 0;
+            margin-right: 0;
         }
 
         .timeline-item:nth-child(even) .timeline-content {
-            margin-left: 40px;
+            margin-left: 0;
         }
 
-
-
         .timeline-date {
-            color: var(--primary);
+            position: absolute;
+            top: 0;
+            left: -60px;
+            transform: translateX(-100%);
+            background: var(--primary);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
             font-weight: 600;
-            margin-bottom: 10px;
-            font-size: 0.9rem;
+            font-size: 0.875rem;
+            white-space: nowrap;
         }
 
         .timeline-title {
@@ -755,15 +761,7 @@
                 gap: 40px;
             }
 
-            .timeline::before {
-                left: 20px;
-            }
 
-            .timeline-content {
-                width: calc(100% - 60px);
-                margin-left: 60px !important;
-                margin-right: 0 !important;
-            }
 
             .contact-section {
                 padding: 40px 30px;
