@@ -13,6 +13,46 @@
 
 ## 📧 联系表单功能
 
+### GitHub Actions 配置方法
+
+#### 1. 设置 GitHub Secrets
+
+在项目仓库的 Settings → Secrets and variables → Actions 中添加以下 Secrets：
+
+- **SENDER_EMAIL**：发件人邮箱地址（如：2359501@qq.com）
+- **SENDER_PASSWORD**：邮箱授权码（不是密码！）
+- **TO_EMAIL**：收件人邮箱地址（如：2359501@qq.com）
+
+#### 2. 配置 QQ 邮箱授权码
+
+1. 登录 QQ 邮箱
+2. 点击右上角的 "设置" → "账户"
+3. 找到 "POP3/IMAP/SMTP/Exchange/CardDAV/CalDAV服务"
+4. 开启 "POP3/SMTP服务" 和 "IMAP/SMTP服务"
+5. 点击 "生成授权码"，按提示操作（需要通过短信验证）
+6. 复制生成的授权码
+
+#### 3. 使用方法
+
+1. 当有用户填写联系表单时，会自动创建一个带 "contact" 标签的 Issue
+2. GitHub Actions 会自动检测到新创建的 Issue 并发送邮件通知
+3. 您可以在 GitHub 仓库的 Issues 页面查看所有联系信息
+4. 同时会收到邮件通知
+
+#### 功能特点
+
+- 完全免费，不需要第三方服务
+- 与 GitHub 无缝集成
+- 自动创建 Issue 作为联系记录
+- 邮件通知功能
+- 支持添加标签和分类
+
+#### 注意事项
+
+- 授权码需要妥善保存，不要在代码中直接暴露
+- 如果授权码过期，需要重新生成
+- 确保邮箱服务未被限制
+
 ### EmailJS 配置步骤
 
 #### 1. 注册 EmailJS 账号

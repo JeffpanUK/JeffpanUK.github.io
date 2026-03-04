@@ -1,0 +1,31 @@
+name: Contact Form Handler
+
+on:
+  issues:
+    types: [opened]
+  issue_comment:
+    types: [created]
+
+jobs:
+  send_email:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'issues' && contains(github.event.issue.labels.*.name, 'contact')
+    
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+          
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+          
+      - name: Send Contact Email
+        env:
+          SENDER_EMAIL: ${{ secrets.SENDER_EMAIL }}
+          SENDER_PASSWORD: ${{ secrets.SENDER_PASSWORD }}
+          TO_EMAIL: ${{ secrets.TO_EMAIL }}
+          ISSUE_DATA: ${{ toJSON(github.event) }}
+        run: python3 send_contact_email.py
