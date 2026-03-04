@@ -282,7 +282,7 @@
         /* 两列布局 */
         .two-column-layout {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 2fr 1fr;
             gap: 60px;
             align-items: start;
         }
@@ -345,7 +345,7 @@
             font-style: italic;
         }
         
-        /* 技能 */
+
         .skills-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -426,11 +426,7 @@
             margin-left: 40px;
         }
 
-        .timeline-content:hover {
-            transform: scale(1.05);
-            border-color: var(--primary);
-            box-shadow: var(--glow);
-        }
+
 
         .timeline-date {
             color: var(--primary);
@@ -459,8 +455,8 @@
         /* 项目 */
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
         }
 
         .project-card {
@@ -932,7 +928,7 @@
                     <a href="mailto:kevinjjp@gmail.com" class="email-link">kevinjjp@gmail.com</a>
                 </div>
                 <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary">查看项目</a>
+
 
                 </div>
             </div>
@@ -951,14 +947,7 @@
                 <div class="about-text">
                     <h3>专注于大模型算法研究</h3>
                     <p>我是一名专注于大模型算法方向的研究人员，目前在字节跳动 Seed 担任语音生成应用 Leader。</p>
-                    <p>我的研究方向包括：</p>
-                    <ul class="skill-list">
-                        <li>多模态生成式大模型</li>
-                        <li>语音对话大模型</li>
-                        <li>Audio Caption（音频描述生成）</li>
-                        <li>自动化小说演播系统</li>
-                    </ul>
-                    <p>我拥有丰富的自然语言处理和机器学习经验，致力于将先进的算法研究成果应用于实际场景，推动人工智能技术的发展。</p>
+                    <p>我的研究方向包括：多模态生成式大模型、语音对话大模型、Audio Caption（音频描述生成）和自动化小说演播系统。</p>
                 </div>
             </div>
         </div>
@@ -1051,8 +1040,9 @@
                 <div class="divider"></div>
             </div>
             <div class="projects-grid">
+                <!-- 业务项目 -->
                 <div class="project-card">
-                    <div class="project-image">🎧</div>
+                    <div class="project-image">📖</div>
                     <div class="project-content">
                         <div class="project-title">番茄小说有声书</div>
                         <div class="project-description">从 0 到 1 搭建自动化单播、多播有声书方案，支持多种音色选择</div>
@@ -1060,18 +1050,6 @@
                             <span class="tag">TTS</span>
                             <span class="tag">Audio Synthesis</span>
                             <span class="tag">Text-to-Speech</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">🎥</div>
-                    <div class="project-content">
-                        <div class="project-title">剪映文本朗读</div>
-                        <div class="project-description">上线抖音小姐姐、东北老铁、陕西佟掌柜等热门音色，支持方言和特色发音</div>
-                        <div class="project-tags">
-                            <span class="tag">Voice Cloning</span>
-                            <span class="tag">Dialect Synthesis</span>
-                            <span class="tag">Speech Processing</span>
                         </div>
                     </div>
                 </div>
@@ -1084,6 +1062,32 @@
                             <span class="tag">LLM</span>
                             <span class="tag">Voice Dialogue</span>
                             <span class="tag">Multi-modal</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">🎬</div>
+                    <div class="project-content">
+                        <div class="project-title">剪映文本朗读</div>
+                        <div class="project-description">上线抖音小姐姐、东北老铁、陕西佟掌柜等热门音色，支持方言和特色发音</div>
+                        <div class="project-tags">
+                            <span class="tag">Voice Cloning</span>
+                            <span class="tag">Dialect Synthesis</span>
+                            <span class="tag">Speech Processing</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 技术项目 -->
+                <div class="project-card">
+                    <div class="project-image">🌍</div>
+                    <div class="project-content">
+                        <div class="project-title">多语种 TTS 系统</div>
+                        <div class="project-description">支持中、英、日、韩、法、德、意、西、阿、越等共计15语种的语音合成系统</div>
+                        <div class="project-tags">
+                            <span class="tag">Multilingual</span>
+                            <span class="tag">TTS</span>
+                            <span class="tag">Language Support</span>
                         </div>
                     </div>
                 </div>
