@@ -15,6 +15,62 @@
 
 ### EmailJS 配置步骤
 
+#### 1. 注册 EmailJS 账号
+
+1. 访问 https://www.emailjs.com/ 注册一个免费账号
+2. 在左侧导航栏点击 "Email Services"
+3. 点击 "Add New Service"，选择您的邮箱提供商（QQ、Gmail、Outlook 等）
+4. 按照提示完成邮箱配置（需要授权码）
+
+#### 2. 创建邮件模板
+
+1. 在左侧导航栏点击 "Email Templates"
+2. 点击 "Create New Template"
+3. 修改邮件主题为：`联系表单 - {{subject}}`
+4. 在邮件内容中添加以下字段：
+   ```
+   姓名：{{name}}
+   邮箱：{{email}}
+   主题：{{subject}}
+   消息：{{message}}
+   ```
+5. 保存模板，记下来模板 ID（如：template_abc123）
+
+#### 3. 获取配置信息
+
+1. 在左侧导航栏点击 "Integration"
+2. 找到 "Public Key"（公钥），记下来（如：user_abc123xyz）
+3. 在 "Email Services" 中找到服务 ID（如：service_123xyz）
+
+#### 4. 更新网站配置
+
+打开 `index.html` 文件，找到以下位置并替换：
+
+1. 在 `<head>` 标签中的 `emailjs.init` 函数：
+   ```javascript
+   emailjs.init("YOUR_PUBLIC_KEY"); // 替换为您的公钥
+   ```
+
+2. 在表单提交函数中的服务 ID 和模板 ID：
+   ```javascript
+   emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
+   ```
+
+#### 5. 测试功能
+
+1. 在本地预览您的网站
+2. 填写联系表单并提交
+3. 检查您的邮箱是否收到邮件
+
+### 重要提示
+
+- EmailJS 免费计划每月有 200 封邮件限制，完全足够个人使用
+- 如果需要更多功能，可以升级到付费计划
+- 确保您的邮箱配置正确，授权码没有过期
+- 如果遇到问题，检查浏览器控制台输出的错误信息
+
+### EmailJS 配置步骤
+
 1. **注册 EmailJS 账号**：访问 https://www.emailjs.com/ 注册免费账号
 2. **添加 EmailJS 脚本**：在网站的 `<head>` 标签中添加 EmailJS 脚本：
    ```html
