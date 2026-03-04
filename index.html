@@ -496,8 +496,8 @@
         /* 项目 */
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 18px;
         }
 
         .project-card {
@@ -556,7 +556,7 @@
             font-weight: 500;
         }
 
-        /* 学术成果 */
+        /* 学术产出 */
 
         .publication-card:hover {
             transform: translateY(-5px);
@@ -950,10 +950,10 @@
                 <li><a href="#about">关于我</a></li>
                 <li><a href="#education">教育背景</a></li>
 
-                <li><a href="#experience-education">经历与教育</a></li>
+                <li><a href="#experience-education">工作经历</a></li>
                 <li><a href="#projects">项目</a></li>
-                <li><a href="#publications">学术成果</a></li>
-                <li><a href="mailto:kevinjjp@gmail.com" class="email-link">邮箱</a></li>
+                <li><a href="#publications">学术产出</a></li>
+                <li><a href="mailto:kevinjjp@gmail.com" class="email-link">联系我</a></li>
             </
         </div>
     </nav>
@@ -994,11 +994,11 @@
         </div>
     </section>
 
-    <!-- 经历与教育 -->
-    <section id="experience-education">
+    <!-- 工作经历 -->
+    <section id="work-experience">
         <div class="container">
             <div class="section-title">
-                <h2>职业经历与教育背景</h2>
+                <h2>职业工作经历背景</h2>
                 <div class="divider"></div>
             </div>
             <div class="two-column-layout">
@@ -1077,16 +1077,16 @@
     <section id="projects">
         <div class="container">
             <div class="section-title">
-                <h2>项目展示</h2>
+                <h2>项目成果</h2>
                 <div class="divider"></div>
             </div>
             <div class="projects-grid">
-                <!-- 业务项目 -->
+                <!-- 业务成果 -->
                 <div class="project-card">
                     <div class="project-image">
-                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="100" height="100" fill="#ff6b00" rx="10"/>
-                            <text x="50" y="60" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="white" text-anchor="middle">番茄小说</text>
+                        <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="80" height="80" fill="#ff6b00" rx="8"/>
+                            <text x="40" y="48" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="white" text-anchor="middle">番茄小说</text>
                         </svg>
                     </div>
                     <div class="project-content">
@@ -1101,26 +1101,9 @@
                 </div>
                 <div class="project-card">
                     <div class="project-image">
-                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="100" height="100" fill="#007bff" rx="10"/>
-                            <text x="50" y="60" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="white" text-anchor="middle">豆包</text>
-                        </svg>
-                    </div>
-                    <div class="project-content">
-                        <div class="project-title">豆包语音</div>
-                        <div class="project-description">为豆包大模型提供语音能力，包括朗读、实时通话、唱歌和方言支持</div>
-                        <div class="project-tags">
-                            <span class="tag">LLM</span>
-                            <span class="tag">Voice Dialogue</span>
-                            <span class="tag">Multi-modal</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="100" height="100" fill="#ff4d4f" rx="10"/>
-                            <text x="50" y="60" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="white" text-anchor="middle">剪映</text>
+                        <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="80" height="80" fill="#ff4d4f" rx="8"/>
+                            <text x="40" y="48" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="white" text-anchor="middle">剪映</text>
                         </svg>
                     </div>
                     <div class="project-content">
@@ -1133,32 +1116,27 @@
                         </div>
                     </div>
                 </div>
-                
-                <!-- 技术项目 -->
                 <div class="project-card">
                     <div class="project-image">
-                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="100" height="100" fill="#00d4ff" rx="10"/>
-                            <text x="50" y="60" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="white" text-anchor="middle">多语种<br/>TTS</text>
+                        <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="80" height="80" fill="#007bff" rx="8"/>
+                            <text x="40" y="48" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="white" text-anchor="middle">豆包</text>
                         </svg>
                     </div>
                     <div class="project-content">
-                        <div class="project-title">多语种 TTS 系统</div>
-                        <div class="project-description">支持中、英、日、韩、法、德、意、西、阿、越等共计15语种的语音合成系统</div>
+                        <div class="project-title">豆包语音</div>
+                        <div class="project-description">为豆包大模型提供语音能力，包括朗读、实时通话、唱歌和方言支持</div>
                         <div class="project-tags">
-                            <span class="tag">Multilingual</span>
-                            <span class="tag">TTS</span>
-                            <span class="tag">Language Support</span>
+                            <span class="tag">LLM</span>
+                            <span class="tag">Voice Dialogue</span>
+                            <span class="tag">Multi-modal</span>
                         </div>
                     </div>
                 </div>
+                
+                <!-- 技术成果 -->
                 <div class="project-card">
-                    <div class="project-image">
-                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="100" height="100" fill="#a855f7" rx="10"/>
-                            <text x="50" y="60" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="white" text-anchor="middle">Audio<br/>Caption</text>
-                        </svg>
-                    </div>
+                    <div class="project-image">🎵</div>
                     <div class="project-content">
                         <div class="project-title">Audio Caption</div>
                         <div class="project-description">开发基于多模态大模型的音频描述生成系统，实现文本到语音的精准转换</div>
@@ -1170,12 +1148,7 @@
                     </div>
                 </div>
                 <div class="project-card">
-                    <div class="project-image">
-                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="100" height="100" fill="#ff9500" rx="10"/>
-                            <text x="50" y="60" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="white" text-anchor="middle">方言<br/>TTS</text>
-                        </svg>
-                    </div>
+                    <div class="project-image">🏮</div>
                     <div class="project-content">
                         <div class="project-title">方言 TTS 系统</div>
                         <div class="project-description">开发支持多种中国方言的语音合成系统，提升方言识别和合成精度</div>
@@ -1186,15 +1159,38 @@
                         </div>
                     </div>
                 </div>
+                <div class="project-card">
+                    <div class="project-image">🌍</div>
+                    <div class="project-content">
+                        <div class="project-title">多语种 TTS 系统</div>
+                        <div class="project-description">支持中、英、日、韩、法、德、意、西、阿、越等共计15语种的语音合成系统</div>
+                        <div class="project-tags">
+                            <span class="tag">Multilingual</span>
+                            <span class="tag">TTS</span>
+                            <span class="tag">Language Support</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>    <!-- 学术产出 -->
+    <section id="publications">
+        <div class="container">
+            <div class="section-title">
+                <h2>学术产出</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="publications-content">
+                <p>我在语音生成和大模型算法领域有丰富的研究经验，参与了多个重要项目的开发。</p>
             </div>
         </div>
     </section>
 
-    <!-- 学术成果 -->
+    <!-- 学术产出 -->
     <section id="publications">
         <div class="container">
             <div class="section-title">
-                <h2>学术成果</h2>
+                <h2>学术产出</h2>
                 <div class="divider"></div>            <div class="publication-card compact">
                 <h3 class="publication-title">
                     <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=4r4yF30AAAAJ&citation_for_view=4r4yF30AAAAJ:Y0pCki6q_DkC" target="_blank">Seed-tts: A family of high-quality versatile speech generation models</a>
@@ -1401,10 +1397,10 @@
                 return;
             }
             
-            // 邮箱格式验证
+            // 联系我格式验证
             const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             if (!emailPattern.test(email)) {
-                alert('请输入有效的邮箱地址');
+                alert('请输入有效的联系我地址');
                 button.textContent = originalText;
                 button.disabled = false;
                 return;
