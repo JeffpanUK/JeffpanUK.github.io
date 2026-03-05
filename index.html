@@ -1543,21 +1543,33 @@
         });
 
         // 箭头点击自动下滑
-        const scrollIndicator = document.querySelector('.scroll-indicator');
-        console.log('scrollIndicator:', scrollIndicator); // 调试日志
-        if (scrollIndicator) {
-            scrollIndicator.addEventListener('click', function () {
-                console.log('Arrow clicked'); // 调试日志
-                const workExperienceSection = document.querySelector('#work-experience');
-                console.log('workExperienceSection:', workExperienceSection); // 调试日志
-                if (workExperienceSection) {
-                    workExperienceSection.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        }
+        window.addEventListener('DOMContentLoaded', function () {
+            const scrollIndicator = document.querySelector('.scroll-indicator');
+            console.log('scrollIndicator:', scrollIndicator); // 调试日志
+            if (scrollIndicator) {
+                // 确保事件监听器正确添加
+                const handleClick = function () {
+                    console.log('Arrow clicked'); // 调试日志
+                    const workExperienceSection = document.querySelector('#work-experience');
+                    console.log('workExperienceSection:', workExperienceSection); // 调试日志
+                    if (workExperienceSection) {
+                        // 使用直接的 scrollTo 方法，确保兼容性
+                        const offsetTop = workExperienceSection.offsetTop;
+                        console.log('Offset top:', offsetTop); // 调试日志
+                        window.scrollTo({
+                            top: offsetTop,
+                            behavior: 'smooth'
+                        });
+                    }
+                };
+                
+                scrollIndicator.addEventListener('click', handleClick);
+                // 还可以添加 touch 事件，提高移动端兼容性
+                scrollIndicator.addEventListener('touchend', handleClick);
+            } else {
+                console.error('Scroll indicator not found');
+            }
+        });
 
         // 滚动动画
         const observerOptions = {
