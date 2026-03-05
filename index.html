@@ -938,7 +938,19 @@
             }
 
             .hero h1 {
-                font-size: 2.5rem;
+                font-size: 2.2rem;
+            }
+
+            .hero .role {
+                font-size: 1.4rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1.2rem;
+            }
+
+            .research-direction {
+                font-size: 1.1rem;
             }
 
             .about-grid {
@@ -946,10 +958,44 @@
                 gap: 40px;
             }
 
+            .two-column-layout {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
 
+            .projects-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
 
             .contact-section {
                 padding: 40px 30px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero .role {
+                font-size: 1.2rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1.1rem;
+            }
+
+            .research-direction {
+                font-size: 1rem;
+            }
+
+            .nav-container {
+                height: 60px;
+            }
+
+            .logo {
+                font-size: 1.3rem;
             }
         }
 
