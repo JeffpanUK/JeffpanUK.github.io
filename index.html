@@ -1018,6 +1018,12 @@
             left: 50%;
             transform: translateX(-50%);
             animation: bounce 2s infinite;
+            cursor: pointer;
+            transition: opacity 0.3s ease;
+        }
+
+        .scroll-indicator:hover {
+            opacity: 0.8;
         }
 
         .scroll-indicator::after {
@@ -1535,6 +1541,20 @@
                 }
             });
         });
+
+        // 箭头点击自动下滑
+        const scrollIndicator = document.querySelector('.scroll-indicator');
+        if (scrollIndicator) {
+            scrollIndicator.addEventListener('click', function () {
+                const workExperienceSection = document.querySelector('#work-experience');
+                if (workExperienceSection) {
+                    workExperienceSection.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        }
 
         // 滚动动画
         const observerOptions = {
