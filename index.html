@@ -1544,9 +1544,12 @@
 
         // 箭头点击自动下滑
         const scrollIndicator = document.querySelector('.scroll-indicator');
+        console.log('scrollIndicator:', scrollIndicator); // 调试日志
         if (scrollIndicator) {
             scrollIndicator.addEventListener('click', function () {
+                console.log('Arrow clicked'); // 调试日志
                 const workExperienceSection = document.querySelector('#work-experience');
+                console.log('workExperienceSection:', workExperienceSection); // 调试日志
                 if (workExperienceSection) {
                     workExperienceSection.scrollIntoView({
                         behavior: 'smooth',
